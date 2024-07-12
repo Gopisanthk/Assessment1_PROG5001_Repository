@@ -20,7 +20,14 @@ public class Marks
         
         for(int i=0; i<numberOfStudents; i++)
         {
-            marks[i] = sc.nextFloat();
+            //check for valid marks within range of 0 - 30
+            float temp = sc.nextFloat();
+            
+            if (temp < 0 || temp > 30)
+            {
+                System.out.println("Invalid marks, please enter the mark again");
+            }
+            marks[i] = temp;
         }  
         
         System.out.println("Marks of the students");
@@ -29,6 +36,16 @@ public class Marks
             System.out.println(marks[j]);
         }
         
+        //mean = sum of all marks/number of students
+        float total = 0;
+        
+        for (int i=0; i<numberOfStudents;i++)
+        {
+            total = total + marks[i];
+        }
+        
+        float mean = total/numberOfStudents;
+        System.out.println("Mean of marks" +"="+ mean);
     }
  
 }
