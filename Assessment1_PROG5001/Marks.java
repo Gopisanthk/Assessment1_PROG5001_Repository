@@ -35,11 +35,48 @@ public class Marks
         {
             System.out.println(marks[j]);
         }
-        
+
+/*        
+        //minimum calculation
+        float min = marks[0];
+        for (int i=0; i<numberOfStudents; i++) 
+        { 
+            if(min > marks[i]);
+            {
+                min = marks[i];
+            }
+        }    
+        System.out.println("The minimum marks of the Assessment"+"="+ min);
+*/    
+
+
+        //sorting logic  
+        for (int i = 0; i < marks.length; i++)   
+        {  
+            for (int j = i + 1; j < marks.length; j++)   
+            {  
+                float tmp = 0;  
+                if (marks[i] > marks[j])   
+                {  
+                    tmp = marks[i];  
+                    marks[i] = marks[j];  
+                    marks[j] = tmp;  
+                }  
+            }
+        } 
+        //prints the sorted element of the array  
+        System.out.println("The minimum marks"+"="+marks[0]);  
+        System.out.println("The maximum marks"+"="+marks[29]); 
+
+
+
+
+
+    
         //mean = sum of all marks/number of students
         float total = 0;
         
-        for (int i=0; i<numberOfStudents;i++)
+        for (int i=0; i<marks.length;i++)
         {
             total = total + marks[i];
         }
