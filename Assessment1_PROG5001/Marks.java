@@ -50,7 +50,7 @@ public class Marks
 */    
 
 
-        //sorting logic  
+        //sorting logic to find lowest and highest
         for (int i = 0; i < marks.length; i++)   
         {  
             for (int j = i + 1; j < marks.length; j++)   
@@ -65,11 +65,8 @@ public class Marks
             }
         } 
         //prints the sorted element of the array  
-        System.out.println("The minimum marks"+"="+marks[0]);  
-        System.out.println("The maximum marks"+"="+marks[29]); 
-
-
-
+        System.out.println("The lowest marks"+"="+marks[0]);  
+        System.out.println("The highest marks"+"="+marks[29]); 
 
 
     
@@ -82,7 +79,26 @@ public class Marks
         }
         
         float mean = total/numberOfStudents;
-        System.out.println("Mean of marks" +"="+ mean);
+        System.out.println("Mean" +"="+ mean);
+        
+        //Standard deviation calculation
+        float summedDiff = 0;
+        for (int i=0; i<numberOfStudents; i++)
+        {
+            summedDiff = summedDiff + (marks[i] - mean)*(marks[i] - mean);
+        }
+        float summedDiff_a = summedDiff / numberOfStudents;
+        
+        
+        //squareroot method found from below tutorial site
+        //https://www.tutorialspoint.com/Java-program-to-find-the-square-root-of-a-given-number
+        double i, precision = 0.000001;
+        for(i = 1; i*i <=summedDiff_a; ++i);
+        for(--i; i*i < summedDiff_a; i += precision);
+        System.out.println("Standard deviation"+"="+i);
+        
+     
+    
     }
  
 }
