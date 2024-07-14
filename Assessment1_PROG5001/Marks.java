@@ -48,7 +48,8 @@ public class Marks
         }
 
    
-        //Sorting logic to find lowest and highest
+        //Sorting logic to find lowest and highest - coding idea got from below tutorial site
+        //https://www.javatpoint.com/how-to-sort-an-array-in-java
         for (int i = 0; i < numberOfStudents; i++)   
         {  
             for (int j = i + 1; j < marks.length; j++)   
