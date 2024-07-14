@@ -2,7 +2,7 @@
 /**
  * Assessment1 PROG5001
  *
- * @author (Gopisanth Kobithasan)
+ * @author (Gopisanth Kobithasan_24388421)
  * @version (20240712)
  */
 
@@ -16,7 +16,7 @@ public class Marks
         int numberOfStudents = 30;
         float[] marks = new float[numberOfStudents];
         
-        //reads Assessment name
+        //Reads Assessment name
         System.out.print("Enter Assessment name: ");
         String Assessment= sc.nextLine();              
 
@@ -47,21 +47,8 @@ public class Marks
             System.out.println(marks[j]);
         }
 
-/*        
-        //minimum calculation
-        float min = marks[0];
-        for (int i=0; i<numberOfStudents; i++) 
-        { 
-            if(min > marks[i]);
-            {
-                min = marks[i];
-            }
-        }    
-        System.out.println("The minimum marks of the Assessment"+"="+ min);
-*/    
-
-
-        //sorting logic to find lowest and highest
+   
+        //Sorting logic to find lowest and highest
         for (int i = 0; i < numberOfStudents; i++)   
         {  
             for (int j = i + 1; j < marks.length; j++)   
@@ -75,12 +62,13 @@ public class Marks
                 }  
             }
         } 
-        //prints the sorted element of the array  
+        
+        //Prints the lowest and highest marks  
         System.out.println("The lowest marks"+"="+marks[0]);  
         System.out.println("The highest marks"+"="+marks[29]); 
 
 
-    
+        //Mean calculation
         //mean = sum of all marks/number of students
         float total = 0;
         
